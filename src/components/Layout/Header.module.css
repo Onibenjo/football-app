@@ -1,0 +1,17 @@
+.appbar {
+  padding: 0.6rem 0;
+  background: linear-gradient(to right, #98c5e9, #76afdd);
+}
+
+.toolbar {
+  display: flex;
+}
+
+.header {
+  flex-grow: 1;
+}
+
+.link {
+  text-decoration: none;
+  color: #fff;
+}
