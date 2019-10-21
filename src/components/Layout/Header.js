@@ -10,13 +10,13 @@ const Header = () => {
       <Toolbar className={styles.toolbar}>
         <div className={styles.header}>
           <div className="header_logo">
-            <CityLogo link={true} linkTo="/" width="60px" height="60px" />
+            <CityLogo link={true} linkTo="/" width="50px" height="50px" />
           </div>
         </div>
-        <Link to="/the_team" className={styles.link}>
+        <Link to="/admin_players" className={styles.link}>
           <Button color="inherit">The Team</Button>
         </Link>
-        <Link to="/the_matches" className={styles.link}>
+        <Link to="/admin_matches" className={styles.link}>
           <Button color="inherit">The Matches</Button>
         </Link>
       </Toolbar>

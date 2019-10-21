@@ -20,7 +20,7 @@ const AdminNav = props => {
     },
     {
       title: "Add Player",
-      link: "/admin_matches/add_matches"
+      link: "/admin_players/edit"
     }
   ];
 

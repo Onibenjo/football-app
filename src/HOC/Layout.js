@@ -4,11 +4,11 @@ import Footer from "../components/Layout/Footer";
 
 const Layout = ({ children }) => {
   return (
-    <div>
+    <React.Fragment>
       <Header />
       {children}
       <Footer />
-    </div>
+    </React.Fragment>
   );
 };
 

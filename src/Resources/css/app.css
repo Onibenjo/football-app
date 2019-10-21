@@ -1,7 +1,9 @@
-body {
+html,body {
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
+  min-height: 100%;
+  width:100%;
 }
 
 a {
@@ -69,7 +71,7 @@ button {
   color: #98c5e9;
   font-weight: 600;
   margin: 10px 0px;
-  text-align:center;
+  text-align: center;
 }
 
 .label_inputs {
@@ -114,7 +116,11 @@ button {
 }
 
 .image_upload_container {
+
   position: relative;
+}
+.image_upload_container img{
+  height: 10rem;
 }
 
 .image_upload_container .remove {
@@ -136,7 +142,7 @@ button {
   text-align: center;
   font-size: 90px;
   font-family: "Righteous", cursive;
-  color: #d5ebfe;
+  color: #0980e7;
 }
 
 /*=============================
@@ -147,7 +153,9 @@ footer {
   text-align: center;
   font-size: 16px;
   color: #ffffff;
-  padding: 30px 0px;
+  padding: 1.5rem 0px;
+  position: absolute;
+  right: 0;left:0;
 }
 
 footer .img_cover {
@@ -319,33 +327,37 @@ footer .footer_discl {
 .match_box_big {
   width: 100%;
   border-bottom: 2px solid #98c6e9;
-  padding: 20px;
+  padding: 1.3rem;
   box-sizing: border-box;
-  height: 143px;
-  clear: both;
+  height: 100%;
+  display: flex;
+    justify-content: space-around;
 }
 
 .match_box_big .block_wraper {
-  display: inline-block;
-  margin-right: 50px;
-  float: left;
+  padding: 0 0.5rem 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .match_box_big .block {
   display: flex;
+  width: 100%;
+  justify-content: space-between;
 }
 
 .match_box_big .icon {
-  width: 50px;
-  height: 50px;
+  width: 3rem;
+  height: 3rem;
   background-size: cover !important;
 }
 
 .match_box_big .block .team,
 .match_box_big .block .result {
-  font-size: 21px;
+  font-size: 1.3rem;
   line-height: 51px;
-  margin-left: 18px;
+  margin-left: 1rem;
   font-weight: 300;
 }
 
@@ -355,7 +367,7 @@ footer .footer_discl {
 
 .block_wraper.nfo {
   border-left: 1px solid #98c6e9;
-  height: 102px;
+  height: 100%;
   padding-left: 10px;
   font-weight: 300;
   color: #5e5e5e;
@@ -564,7 +576,8 @@ footer .footer_discl {
 ================== */
 
 .the_matches_container {
-  margin-top: 96px;
+  margin-top: 5rem;
+  min-height: 100vh;
 }
 
 .the_matches_wrapper {
@@ -600,9 +613,10 @@ footer .footer_discl {
 ===============================*/
 
 .admin_container {
-  margin-top: 80px;
+  margin-top: 70px;
   display: flex;
-  height: 90vh;
+  height: 100%;
+  /* height: 90vh; */
 }
 
 .admin_container .admin_left_nav {
@@ -610,19 +624,22 @@ footer .footer_discl {
   background: #282828;
   border-right: 2px solid #01285e;
   display: flex;
-  align-items:center;
+  padding-top: 1.2rem;
+  position: fixed;
+  min-height: 89vh;
 }
 
 .admin_container .admin_right {
   flex-grow: 1;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
+  min-height: 90vh;
   display: flex;
   justify-content: center;
-
+  margin-left: 10vw;
 }
 .admin_container .admin_progress {
   text-align: center;
-  margin: 20px 0px;
+  margin: 5rem 0px;
 }
 
 .admin_container .matches_tag_red {
@@ -671,8 +688,10 @@ footer .footer_discl {
   display: block;
   border-radius: 4px;
   padding: 0.7rem 1.2rem;
-  border:none;outline:none;
-  background: linear-gradient(to right, rgb(20, 172, 233), rgb(18, 129, 219))
+  border: none;
+  outline: none;
+  background: linear-gradient(to right, rgb(20, 172, 233), rgb(18, 129, 219));
+  cursor:pointer;
 }
 
 /*=============================
@@ -721,6 +740,7 @@ footer .footer_discl {
 .signin_wrapper form button {
   width: 100%;
   padding: 10px;
+  cursor:pointer;
 }
 
 .signin_wrapper h2 {

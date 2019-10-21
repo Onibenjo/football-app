@@ -13,11 +13,11 @@ const AddEditMatches = ({ match, history }) => {
   const [loading, setLoading] = useState(true);
   // const [matches, setMatches] = useState([]);
 
-  const [validation, setValidation] = useState({
+  const validation = {
     required: true,
     valid: false,
     message: ""
-  });
+  };
 
   const [date, setDate] = useState({
     element: "input",
@@ -225,19 +225,14 @@ const AddEditMatches = ({ match, history }) => {
     setTeams(teams);
     setLoading(false);
     setError(false)
-    // setLocal();
-    //  setAway();
-    // setReferee();
-    // setStadium();
-    // setResult();
-    // setFinal();
   };
 
   const updateFieldsCB = useCallback(updateFields, []);
 
   useEffect(() => {
+    console.log("edit atch effect ran")
     const matchId = match.params.id;
-  setLoading(true);
+    setLoading(true);
     const getTeams = (match, type) => {
       firebaseTeams.once("value").then(snapshot => {
         const teams = firebaseArrayLoop(snapshot);
@@ -256,6 +251,7 @@ const AddEditMatches = ({ match, history }) => {
 
     if (!matchId) {
       getTeams(false, "Add Match");
+      setLoading(false);
     } else {
       firebaseDB
         .ref(`matches/${matchId}`)
@@ -266,6 +262,8 @@ const AddEditMatches = ({ match, history }) => {
           getTeams(match, "Edit Match");
         });
     }
+
+    return () => firebaseDB.ref(`matches/${matchId}`).off()
   }, [match.params.id, updateFieldsCB]);
 
   return (
@@ -381,7 +379,7 @@ const AddEditMatches = ({ match, history }) => {
             )}
 
             <div className="admin_submit">
-              <button onClick={() => handleSubmit}>{formType}</button>
+              <button disabled={loading} onClick={() => handleSubmit}>{formType}</button>
             </div>
           </form>
         </div>
