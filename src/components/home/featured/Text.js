@@ -19,18 +19,15 @@ const Text = () => {
           duration: 600,
           ease: easePolyOut
         }
-      }}
-    >
+      }}>
       {({ opacity, rotate }) => {
         return (
           <div
             className="featured_number"
             style={{
               opacity,
-              left: `30vw`,
-              transform: `translate(0, 50px) rotateY(${rotate}deg)`
-            }}
-          >
+              transform: `rotateY(${rotate}deg)`
+            }}>
             3
           </div>
         );
@@ -48,25 +45,22 @@ const Text = () => {
       enter={{
         opacity: [1],
         x: [15],
-        y: [30],
+        y: [40],
         timing: {
           delay: 1000,
           duration: 500,
           ease: easePolyOut
         }
-      }}
-    >
+      }}>
       {({ opacity, x, y }) => {
         return (
           <div
             className="featured_first"
             style={{
               opacity,
-              //   transform: `translate(-50%, -50%)`,
               bottom: `${y}%`,
-              left: `${x}vw`
-            }}
-          >
+              left: `${x}%`
+            }}>
             League
           </div>
         );
@@ -83,26 +77,23 @@ const Text = () => {
       }}
       enter={{
         opacity: [1],
-        x: [15],
+        x: [10],
         y: [20],
         timing: {
           delay: 1200,
           duration: 500,
           ease: easePolyOut
         }
-      }}
-    >
+      }}>
       {({ opacity, x, y }) => {
         return (
           <div
             className="featured_second"
             style={{
               opacity,
-              //   transform: `translate(-50%, -50%)`,
               bottom: `${y}%`,
-              left: `${x}vw`
-            }}
-          >
+              left: `${x}%`
+            }}>
             Championship
           </div>
         );
@@ -122,17 +113,13 @@ const Text = () => {
           duration: 800,
           ease: easePolyOut
         }
-      }}
-    >
+      }}>
       {({ opacity }) => {
         return (
           <div
             className="featured_player"
             style={{
               opacity,
-              transform: `translate(0, 50%)`,
-              right: `25vw`,
-              top: `-10vh`,
               background: `url(${featuredPlayer})`
             }}
           />

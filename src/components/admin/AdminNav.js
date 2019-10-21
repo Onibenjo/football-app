@@ -41,13 +41,7 @@ const AdminNav = props => {
     ));
 
   const logoutHandler = () => {
-    firebase
-      .auth()
-      .signOut()
-      .then(() => {
-        console.log("Logged Out");
-      })
-      .catch(err => console.log(err));
+    firebase.auth().signOut();
   };
 
   return (

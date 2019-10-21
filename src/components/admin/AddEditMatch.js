@@ -177,8 +177,7 @@ const AddEditMatches = ({ match, history }) => {
         dataToSubmit["awayThmb"] = team.thmb;
       }
     });
-    console.log(formIsValid);
-    console.log(formdata);
+
     if (formIsValid) {
       if (formType === "Edit Match") {
         firebaseDB
@@ -230,7 +229,7 @@ const AddEditMatches = ({ match, history }) => {
   const updateFieldsCB = useCallback(updateFields, []);
 
   useEffect(() => {
-    console.log("edit atch effect ran")
+    
     const matchId = match.params.id;
     setLoading(true);
     const getTeams = (match, type) => {

@@ -13,10 +13,10 @@ const Header = () => {
             <CityLogo link={true} linkTo="/" width="50px" height="50px" />
           </div>
         </div>
-        <Link to="/admin_players" className={styles.link}>
+        <Link to="the_team" className={styles.link}>
           <Button color="inherit">The Team</Button>
         </Link>
-        <Link to="/admin_matches" className={styles.link}>
+        <Link to="the_matches" className={styles.link}>
           <Button color="inherit">The Matches</Button>
         </Link>
       </Toolbar>

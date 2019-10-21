@@ -40,7 +40,7 @@ const TheMatches = () => {
             //     matches: reverseArray(matches),
             //     filterMatches: reverseArray(matches)
             // });
-            console.log('ran')
+            
         })
         return () => firebaseMatches.off()
     },[])
@@ -76,8 +76,7 @@ const TheMatches = () => {
         setResultFilter(result);
         setPlayedFilter('All');
     }
-    console.log(filterMatches)
-    console.log(matches)
+    
     return (
         <div className="the_matches_container">
             {loading ? (

@@ -28,11 +28,12 @@ const Team = () => {
                 players[key].url = url;
                 resolve();
               })
-              .catch(() => reject());
+              .catch(() => {
+                reject();
+              });
           })
         );
       }
-
       Promise.all(promises).then(() => {
         setLoading(false);
         setPlayersList(players);
@@ -59,8 +60,6 @@ const Team = () => {
       );
     });
 
-  console.log(playersList);
-
   return (
     <div
       className="the_team_container"
@@ -69,7 +68,7 @@ const Team = () => {
         <div>
           <div className="team_category_wrapper">
             <div className="title">Keepers</div>
-            <div className="team_cards">{showPlayersByCategory("Keepers")}</div>
+            <div className="team_cards">{showPlayersByCategory("Keeper")}</div>
           </div>
           <div className="team_category_wrapper">
             <div className="title">Defence</div>

@@ -2,13 +2,12 @@ import React, { useState } from "react";
 import { easePolyOut } from "d3-ease";
 import { Animate } from "react-move";
 import PlayerCard from "../../UI/playerCards";
-import Otamendi from "../../../Resources/images/players/Otamendi.png";
+import Otamendi from "../../../Resources/images/Otamendi.png";
 
 const Cards = ({ showCard }) => {
   const [cards] = useState([
-    { bottom: 90, left: 150 },
-    { bottom: 60, left: 100 },
-    { bottom: 30, left: 50 },
+    { bottom: 30, left: 60 },
+    { bottom: 15, left: 30 },
     { bottom: 0, left: 0 }
   ]);
 
@@ -24,19 +23,16 @@ const Cards = ({ showCard }) => {
         enter={{
           left: [card.left],
           bottom: [card.bottom],
-          timing: { delay: 600, duration: 900, ease: easePolyOut }
-        }}
-      >
+          timing: { delay: 400, duration: 600, ease: easePolyOut }
+        }}>
         {({ left, bottom }) => {
           return (
             <div
               style={{
                 position: "absolute",
-                background: `url(${Otamendi})`,
                 bottom,
                 left
-              }}
-            >
+              }}>
               <PlayerCard
                 name="Nicolas"
                 lastname="Otamendi"

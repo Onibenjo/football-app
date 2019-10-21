@@ -18,40 +18,40 @@ import Error404Page from "./components/UI/Error404Page";
 
 const App = () => {
   return (
-    <AuthProvider>
-      <Layout>
-        <Switch>
+    <Switch>
+      <AuthProvider>
+        <PrivateRoute exact component={Dashboard} path="/dashboard" />
+        <PrivateRoute exact component={Matches} path="/admin_matches" />
+        <PrivateRoute exact component={Players} path="/admin_players" />
+        <PrivateRoute
+          exact
+          component={AddEditMatch}
+          path="/admin_matches/edit"
+        />
+        <PrivateRoute
+          exact
+          component={AddEditMatch}
+          path="/admin_matches/edit/:id"
+        />
+        <PrivateRoute
+          exact
+          component={AddEditPlayer}
+          path="/admin_players/edit"
+        />
+        <PrivateRoute
+          exact
+          component={AddEditPlayer}
+          path="/admin_players/edit/:id"
+        />
+        <Layout>
           <PublicRoute exact component={Home} path="/" />
           <PublicRoute exact restricted component={SignIn} path="/signin" />
-          <PrivateRoute exact component={Dashboard} path="/dashboard" />
           <PublicRoute exact component={TheTeam} path="/the_team" />
           <PublicRoute exact component={TheMatches} path="/the_matches" />
-          <PrivateRoute exact component={Matches} path="/admin_matches" />
-          <PrivateRoute exact component={Players} path="/admin_players" />
-          <PrivateRoute
-            exact
-            component={AddEditMatch}
-            path="/admin_matches/edit"
-          />
-          <PrivateRoute
-            exact
-            component={AddEditMatch}
-            path="/admin_matches/edit/:id"
-          />
-          <PrivateRoute
-            exact
-            component={AddEditPlayer}
-            path="/admin_players/edit"
-          />
-          <PrivateRoute
-            exact
-            component={AddEditPlayer}
-            path="/admin_players/edit/:id"
-          />
           <PublicRoute component={Error404Page} />
-        </Switch>
-      </Layout>
-    </AuthProvider>
+        </Layout>
+      </AuthProvider>
+    </Switch>
   );
 };
 

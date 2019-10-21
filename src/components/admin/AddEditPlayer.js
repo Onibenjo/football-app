@@ -84,7 +84,7 @@ const AddEditPlayer = ({ match, history }) => {
 
   const storeFilename = filename => {
     setImage({ ...image, value: filename });
-    console.log(image);
+    
   };
 
   const successForm = message => {
@@ -119,10 +119,8 @@ const AddEditPlayer = ({ match, history }) => {
       formIsValid = formdata[key].valid && formIsValid;
     }
 
-    console.log({ formIsValid, dataToSubmit });
-
     if (formIsValid) {
-      console.log(dataToSubmit);
+      
       if (formType === "Edit Player") {
         firebaseDB
           .ref(`players/${playerId}`)
@@ -164,7 +162,6 @@ const AddEditPlayer = ({ match, history }) => {
   useEffect(() => {
     const playerId = match.params.id;
     setLoading(true);
-    console.log('Useeffect ran');
 
     if (!playerId) {
       setFormType("Add player");
@@ -201,14 +198,13 @@ const AddEditPlayer = ({ match, history }) => {
                 ""
               );
               setLoading(false);
-              console.log("superrb");
+              
             });
         }).catch(() => {setLoading(false) });
     }
 
     return () => firebaseDB.ref(`players/${playerId}`).off()
   }, [match.params.id, updateFieldsCB]);
-  // [match.params.id, updateFields, image.value]
 
   return (
     <AdminLayout>

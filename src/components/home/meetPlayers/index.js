@@ -11,12 +11,10 @@ const MeetPlayers = () => {
       fraction={0.7}
       onReveal={() => {
         setShow(true);
-      }}
-    >
+      }}>
       <div
         className="home_meetplayers"
-        style={{ background: `#fff url(${Stripes})`, display: "flex" }}
-      >
+        style={{ background: `#fff url(${Stripes})`, display: "flex" }}>
         <div className="container">
           <div className="home_meetplayers_wrapper">
             <div className="home_card_wrapper">
@@ -26,39 +24,36 @@ const MeetPlayers = () => {
               <div>
                 <Tag
                   bck="#0e1731"
-                  size="6rem"
+                  size="4rem"
                   color="#ffffff"
                   add={{
                     display: "inline-block",
                     marginBottom: "20px"
-                  }}
-                >
+                  }}>
                   Meet
                 </Tag>
               </div>
               <div>
                 <Tag
                   bck="#0e1731"
-                  size="6rem"
+                  size="4rem"
                   color="#ffffff"
                   add={{
                     display: "inline-block",
                     marginBottom: "20px"
-                  }}
-                >
+                  }}>
                   The
                 </Tag>
               </div>
               <div>
                 <Tag
                   bck="#0e1731"
-                  size="6rem"
+                  size="4rem"
                   color="#ffffff"
                   add={{
                     display: "inline-block",
                     marginBottom: "20px"
-                  }}
-                >
+                  }}>
                   Players
                 </Tag>
               </div>
@@ -74,8 +69,7 @@ const MeetPlayers = () => {
                     marginBottom: "27px",
                     border: `1px solid #0e1731`,
                     fontSize: "1rem"
-                  }}
-                >
+                  }}>
                   Meet them
                 </Tag>
               </div>
