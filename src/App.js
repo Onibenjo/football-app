@@ -1,6 +1,5 @@
 import React from "react";
 import "./Resources/css/app.css";
-import Layout from "./HOC/Layout";
 import { Switch } from "react-router-dom";
 import { AuthProvider } from "./auth";
 import PrivateRoute from "./components/auth/PrivateRoute";
