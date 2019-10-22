@@ -222,7 +222,7 @@ export default function MiniDrawer({ children }) {
       </Drawer>
       <main className={clsx("admin_container", classes.content)}>
         <div className={classes.toolbar} />
-        <div style={{ maxWidth: "70vw" }}>{children}</div>
+        <div className="admin_section">{children}</div>
       </main>
     </div>
   );

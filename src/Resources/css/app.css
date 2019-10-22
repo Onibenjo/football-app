@@ -765,7 +765,13 @@ footer .footer_discl {
   margin-top: 200px;
 }
 
+.admin_section{
+  width: 100%;
+  max-width: 85vw
+}
+
 @media screen and (max-width: 400px) {
+  
   .featured_second{
     font-size:2rem;
   }
@@ -781,4 +787,11 @@ footer .footer_discl {
   .home_meetplayers_wrapper {
     grid-template-columns: 1fr;
   }
+}
+
+@media screen and (min-width: 1000px) {
+.admin_section{
+  width: 77%;
+  max-width: 85vw
+}
 }

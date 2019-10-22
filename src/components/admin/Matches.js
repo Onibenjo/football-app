@@ -16,13 +16,14 @@ import { firebaseMatches } from "../../firebase";
 
 const styles = theme => ({
   root: {
-    width: "100%",
-    margin: "0 auto",
+    width: "85%",
+    // margin: "0 auto",
     marginTop: theme.spacing.unit * 2,
-    overflowX: "auto"
+    overflowX: "auto",
+    height: "85vh"
   },
   table: {
-    minWidth: 580
+    minWidth: 380
   }
 });
 
