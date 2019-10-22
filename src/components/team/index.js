@@ -6,6 +6,7 @@ import Stripes from "../../Resources/images/stripes.png";
 import { firebasePlayers, firebase } from "./../../firebase";
 import { firebaseArrayLoop } from "../UI/misc";
 import { Promise } from "core-js";
+import CircularProgress  from "@material-ui/core/CircularProgress";
 
 const Team = () => {
   const [loading, setLoading] = useState(true);
@@ -64,6 +65,10 @@ const Team = () => {
     <div
       className="the_team_container"
       style={{ background: `url(${Stripes}) repeat` }}>
+      {loading && <div className="admin_progress">
+                <CircularProgress thickness={6} style={{ color: "#98c5e9" }} />
+            </div>
+            }
       {!loading && (
         <div>
           <div className="team_category_wrapper">

@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { Route, Redirect } from "react-router-dom";
 import { AuthContext } from "../../auth";
+import Layout from './../../HOC/Layout';
 
 const PublicRoute = ({ component: Component, ...rest }) => {
   const { currentUser } = useContext(AuthContext);
@@ -17,10 +18,16 @@ const PublicRoute = ({ component: Component, ...rest }) => {
               }}
             />
           ) : (
+              <Layout>
+                
             <Component {...props} />
+            </Layout>
           )
         ) : (
-          <Component {...props} />
+            <Layout>
+
+              <Component {...props} />
+            </Layout>
         )
       }
     />

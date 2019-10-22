@@ -34,7 +34,7 @@ export const AdminLayout = ({ children }) => {
   );
 };
 
-const drawerWidth = 160;
+const drawerWidth = 180;
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -103,7 +103,7 @@ const useStyles = makeStyles(theme => ({
 
 export default function MiniDrawer({ children }) {
   const classes = useStyles();
-  const [open, setOpen] = React.useState(true);
+  const [open, setOpen] = React.useState(false);
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -222,7 +222,7 @@ export default function MiniDrawer({ children }) {
       </Drawer>
       <main className={clsx("admin_container", classes.content)}>
         <div className={classes.toolbar} />
-        <div className="">{children}</div>
+        <div style={{ maxWidth: "70vw" }}>{children}</div>
       </main>
     </div>
   );

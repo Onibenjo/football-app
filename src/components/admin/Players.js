@@ -16,13 +16,13 @@ import { firebasePlayers } from "../../firebase";
 
 const styles = theme => ({
   root: {
-    width: "85%",
+    width: "100%",
     margin: "0 auto",
-    marginTop: theme.spacing.unit * 3,
+    marginTop: theme.spacing.unit * 2,
     overflowX: "auto"
   },
   table: {
-    minWidth: 700
+    minWidth: 580
   }
 });
 

@@ -1,7 +1,7 @@
 .appbar {
   padding: 0.35rem 2rem;
   background: linear-gradient(to right, #98c5e9, #76afdd);
-  min-height: 10vh;
+  /* min-height: 10vh; */
 }
 
 .toolbar {
